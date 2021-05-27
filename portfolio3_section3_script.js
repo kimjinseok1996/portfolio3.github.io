@@ -20,6 +20,7 @@ $(function(){
                     
                     $("#workslist").addClass("worksliston880");
                     $("#works_screenbox").addClass("worksscreenon880");
+                    $("#works_movebox").addClass("works_movebox880");
                 }
             });
             
