@@ -51,8 +51,8 @@
         #workslist.worksliston880{
             top: 80%;
             left: 50%;
-            width: 25%;
-            height: 80vw;
+            width: 150px;
+            height: 50%;
             transform: translate(-50%, -50%) rotate(-90deg);
             opacity: 1;
         }
