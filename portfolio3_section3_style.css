@@ -107,6 +107,7 @@
         }
 #works_movebox.works_movebox880{
     top: 70px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
 }
         .worksbox.workson{
             opacity: 1;
