@@ -21,6 +21,8 @@ $(function(){
                     $("#workslist").addClass("worksliston880");
                     $("#works_screenbox").addClass("worksscreenon880");
                     $("#works_movebox").addClass("works_movebox880");
+                            
+                    $(".worksbox").eq(0).addClass('workson880');
                 }
             });
             
@@ -38,6 +40,11 @@ $(function(){
                 if(workslistnum == 7){
                     $("#workslistdownbtn").css({"display":"none"});
                 }
+                        
+                if(winwidth <= 880){
+                    $(".worksbox").removeClass('workson880');
+                    $(".worksbox").eq(workslistnum).addClass('workson880');
+                }
             });
             $("#workslistupbtn").on("click",function(){
                 workslistnum --;
@@ -52,6 +59,11 @@ $(function(){
                 
                 if(workslistnum == 0){
                     $("#workslistupbtn").css({"display":"none"});
+                }
+                        
+                if(winwidth <= 880){
+                    $(".worksbox").removeClass('workson880');
+                    $(".worksbox").eq(workslistnum).addClass('workson880');
                 }
             });
             
@@ -75,6 +87,10 @@ $(function(){
                 $(".worksbox").last().on("click",function(){
                     $("#workslistdownbtn").css({"display":"none"});
                 });
+                if(winwidth <= 880){
+                    $(".worksbox").removeClass('workson880');
+                    $(this).addClass('workson880');
+                }
             });
             $(".worksbox").not($(".worksbox").eq(0)).on("click",function(){
                 $("#workslistupbtn").css({"display":"block"});
