@@ -272,6 +272,9 @@
   font-size: 13px;
   vertical-align: middle;
 }
+#works-slider-contents table td {
+  text-align: left;
+}
 #works-slider-contents table th {
   width: 25%;
 }
