@@ -1,0 +1,96 @@
+@charset "utf-8";
+#menubtnbox {
+  width: 40px;
+  height: 39px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.menubar {
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  background: #474747;
+  border-radius: 50px;
+  left: 4px;
+  transition: 0.3s;
+}
+#topmenubar {
+  top: 8px;
+}
+#middlemenubar {
+  top: 18px;
+  opacity: 1;
+}
+#bottommenubar {
+  top: 28px;
+}
+
+#topmenubar.menuon {
+  top: 18px;
+  transform: rotate(45deg);
+}
+#middlemenubar.menuon {
+  top: 18px;
+  opacity: 0;
+}
+#bottommenubar.menuon {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+#mainmenu {
+  width: 100%;
+  height: 100vh;
+  background: #d9fcff;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 100%;
+  transition: 1s;
+  opacity: 0;
+}
+#mainmenu.menuon {
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+#mainmenu_menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 7vh;
+}
+.mainmenu_menutext {
+  position: relative;
+}
+.mainmenu_menutext p a {
+  position: relative;
+  z-index: 9999;
+}
+.mainmenu_menutext .shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 50%;
+  border: 0.3vh solid #a6f7ff;
+  width: 6vh;
+  height: 6vh;
+  transform-origin: bottom right;
+  z-index: -9999;
+  transition: 0.3s;
+}
+.mainmenu_menutext .shadow.hoveron {
+  transform: scale(2, 2);
+  opacity: 0.5;
+}
+#mainmenu_menu p a {
+  font-size: 3vh;
+  color: #474747;
+}

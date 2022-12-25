@@ -1,212 +1,260 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KIMJINSEOK_PORTFOLIO</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="portfolio3_menu_script.js"></script>
-    <link rel="stylesheet" href="portfolio3_menu_style.css">
-    <script src="portfolio3_section1_script.js"></script>
-    <link rel="stylesheet" href="portfolio3_section1_style.css">
-    <script src="portfolio3_section2_script.js"></script>
-    <link rel="stylesheet" href="portfolio3_section2_style.css">
-    <script src="portfolio3_section3_script.js"></script>
-    <link rel="stylesheet" href="portfolio3_section3_style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/portfolio3_menu_style.css" />
+    <link rel="stylesheet" href="css/portfolio3_section1_style.css" />
+    <link rel="stylesheet" href="css/portfolio3_section2_style.css" />
+    <link rel="stylesheet" href="css/portfolio3_section3_style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        a{
-            text-decoration: none;
-        }
-        body{
-            overflow-x: hidden;
-            font-family: 'Quicksand', sans-serif;
-            color: #474747;
-        }
-        section{
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        #section1, #section3, #section5{
-            background: #e6fdff;
-        }
-        
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        overflow-x: hidden;
+        font-family: "Quicksand", sans-serif;
+        color: #474747;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      #section1,
+      #section3,
+      #section5 {
+        background: #e6fdff;
+      }
     </style>
-    <script>
-        $(function(){
-
-        });
-    </script>
-</head>
-<body>
-   <div id="menubtnbox">
-        <div class="menubar" id="topmenubar"></div>
-        <div class="menubar" id="middlemenubar"></div>
-        <div class="menubar" id="bottommenubar"></div>
+  </head>
+  <body>
+    <div id="menubtnbox">
+      <div class="menubar" id="topmenubar"></div>
+      <div class="menubar" id="middlemenubar"></div>
+      <div class="menubar" id="bottommenubar"></div>
     </div>
-    
+
     <div id="mainmenu">
-       <div id="mainmenu_menu">
-            <div class="mainmenu_menutext"><p><a href="#section1">HOME</a></p>
-                <div class="shadow"></div>
-            </div>
-            <div class="mainmenu_menutext"><p><a href="#section2">ABOUT</a></p>
-                <div class="shadow"></div>
-            </div>
-            <div class="mainmenu_menutext"><p><a href="#section3">WORKS</a></p>
-                <div class="shadow"></div>
-            </div>
+      <div id="mainmenu_menu">
+        <div class="mainmenu_menutext">
+          <p><a href="#section1">HOME</a></p>
+          <div class="shadow"></div>
         </div>
+        <div class="mainmenu_menutext">
+          <p><a href="#section2">ABOUT</a></p>
+          <div class="shadow"></div>
+        </div>
+        <div class="mainmenu_menutext">
+          <p><a href="#section3">WORKS</a></p>
+          <div class="shadow"></div>
+        </div>
+      </div>
     </div>
-    
+
     <section id="section1">
-        <div id="maintext">
-            <div class="maintext_text"><p>P</p></div>
-            <div class="maintext_text"><p>O</p></div>
-            <div class="maintext_text"><p>R</p></div>
-            <div class="maintext_text"><p>T</p></div>
-            <div class="maintext_text"><p>F</p></div>
-            <div class="maintext_text"><p>O</p></div>
-            <div class="maintext_text"><p>R</p></div>
-            <div class="maintext_text"><p>I</p></div>
-            <div class="maintext_text"><p>O</p></div>
-            <div id="maintext_by"><p>By KimJinSeok</p></div>
-        </div>
-        <div id="bottomarrow"></div>
-        <div id="contact">
-            <p>Tell. 010-4171-1901</p>
-            <p>E-mail. kjs392@naver.com</p>
-        </div>
-    </section>
-    
-    <section id="section2">
-        <div id="abouttext">
-            <div class="abouttext_text"><p>A</p></div>
-            <div class="abouttext_text"><p>B</p></div>
-            <div class="abouttext_text"><p>O</p></div>
-            <div class="abouttext_text"><p>U</p></div>
-            <div class="abouttext_text"><p>T</p></div>
-        </div>
-        <div id="section2_certification">
-            <p>Certification</p>
-            <p>정보처리기사</p>
-            <p>웹디자인기능사</p>
-            <p>GTQ1급</p>
-        </div>
-        <div id="section2_skills">
-            <div class="section2_skillsbox html5">
-                <div class="section2_skillbox_img html5img">
-                    <img src="html5logo.png" alt="html5logo">
-                </div>
-                <div class="section2_skillbox_bar">
-                    <div class="sec2_barbox html5bar"></div>
-                    <div class="sec2_bartext html5bartext"><span>0</span>%</div>
-                </div>
-            </div>
-            <div class="section2_skillsbox css3">
-                <div class="section2_skillbox_img css3img">
-                    <img src="csslogo.png" alt="css3logo">
-                </div>
-                <div class="section2_skillbox_bar">
-                    <div class="sec2_barbox css3bar"></div>
-                    <div class="sec2_bartext css3bartext"><span>0</span>%</div>
-                </div>
-            </div>
-            <div class="section2_skillsbox javascript">
-                <div class="section2_skillbox_img javascriptimg">
-                    <img src="jslogo.png" alt="jslogo">
-                </div>
-                <div class="section2_skillbox_bar">
-                    <div class="sec2_barbox javascriptbar"></div>
-                    <div class="sec2_bartext javascriptbartext"><span>0</span>%</div>
-                </div>
-            </div>
-            <div class="section2_skillsbox jquery">
-                <div class="section2_skillbox_img jqueryimg">
-                    <img src="jquerylogo.png" alt="jqlogo">
-                </div>
-                <div class="section2_skillbox_bar">
-                    <div class="sec2_barbox jquerybar"></div>
-                    <div class="sec2_bartext jquerybartext"><span>0</span>%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="section3">
-        <div id="workstext">
-            <div class="workstext_text"><p>W</p></div>
-            <div class="workstext_text"><p>O</p></div>
-            <div class="workstext_text"><p>R</p></div>
-            <div class="workstext_text"><p>K</p></div>
-            <div class="workstext_text"><p>S</p></div>
-        </div>
-        
-        <div id="workslist">
-            <div id="workslistupbtn"></div>
-            <div id="workslistdownbtn"></div>
-            <div id="workslistbox">
-                <div id="works_movebox">
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                    <div class="worksbox"></div>
-                </div>
-            </div>            
-        </div>
-        <div id="works_screenbox">
-            <div class="worksscreenbox commonbox"><img src="commonwebimg2.JPG" alt="common">
-            <div class="worksscreenboxtext">
-                <p>고전적인 평범한 웹 페이지 입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/commonweb.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox reponsivebox"><img src="responsivewebimg2.JPG" alt="responsive">
-            <div class="worksscreenboxtext">
-                <p>반응형 웹 사이트 입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/responsiveweb.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox ufcbox"><img src="ufcimg.JPG" alt="ufc">
-            <div class="worksscreenboxtext">
-                <p>UFC 사이트 습작 입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/ufc.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox pbbox"><img src="pbimg.JPG" alt="pb">
-            <div class="worksscreenboxtext">
-                <p>파리바게트 사이트 습작 입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/p_b.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox port2box"><img src="port2img.JPG" alt="port2">
-            <div class="worksscreenboxtext">
-                <p>역동적으로만든 포트폴리오입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/portfolio.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox jokerbox"><img src="jokerimg.JPG" alt="joker">
-            <div class="worksscreenboxtext">
-                <p>영화Joker를보고 만든 웹사이트입니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/Joker.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox monbox"><img src="monimg.JPG" alt="mon">
-            <div class="worksscreenboxtext">
-                <p>monster컨셉의 인터렉티브웹사이트 입니다. interactive developer님의 사이트를 모티브하였습니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/mon.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-            <div class="worksscreenbox laonbox"><img src="laonimg2.JPG" alt="laon">
-            <div class="worksscreenboxtext">
-                <p>조별과제로 제작한 여행사 사이트입니다. 전체적인 레이아웃과 구조, 달력, 푸터, 헤더 부분을 맡았습니다.</p>
-                <p><a href="https://kimjinseok1996.github.io/laon.github.io/" target="_blank">SHOW ▶</a></p>
-            </div></div>
-        </div>
+      <div id="maintext">
+        <div class="maintext_text"><p>P</p></div>
+        <div class="maintext_text"><p>O</p></div>
+        <div class="maintext_text"><p>R</p></div>
+        <div class="maintext_text"><p>T</p></div>
+        <div class="maintext_text"><p>F</p></div>
+        <div class="maintext_text"><p>O</p></div>
+        <div class="maintext_text"><p>R</p></div>
+        <div class="maintext_text"><p>I</p></div>
+        <div class="maintext_text"><p>O</p></div>
+        <div id="maintext_by"><p>By KimJinSeok</p></div>
+      </div>
+      <div id="bottomarrow"></div>
+      <div id="contact">
+        <p>Tell. 010-4171-1901</p>
+        <p>E-mail. kjs392@naver.com</p>
+      </div>
     </section>
 
-</body>
+    <section id="section2">
+      <div id="abouttext">
+        <div class="abouttext_text"><p>A</p></div>
+        <div class="abouttext_text"><p>B</p></div>
+        <div class="abouttext_text"><p>O</p></div>
+        <div class="abouttext_text"><p>U</p></div>
+        <div class="abouttext_text"><p>T</p></div>
+      </div>
+      <div id="section2_certification">
+        <p>Certification</p>
+        <p>정보처리기사</p>
+        <p>웹디자인기능사</p>
+        <p>GTQ1급</p>
+      </div>
+      <div id="section2_skills">
+        <div class="section2_skillsbox html5">
+          <div class="section2_skillbox_img html5img">
+            <img src="img/html5logo.png" alt="html5logo" />
+          </div>
+          <div class="section2_skillbox_bar">
+            <div class="sec2_barbox html5bar"></div>
+            <div class="sec2_bartext html5bartext"><span>0</span>%</div>
+          </div>
+        </div>
+        <div class="section2_skillsbox css3">
+          <div class="section2_skillbox_img css3img">
+            <img src="img/csslogo.png" alt="css3logo" />
+          </div>
+          <div class="section2_skillbox_bar">
+            <div class="sec2_barbox css3bar"></div>
+            <div class="sec2_bartext css3bartext"><span>0</span>%</div>
+          </div>
+        </div>
+        <div class="section2_skillsbox javascript">
+          <div class="section2_skillbox_img javascriptimg">
+            <img src="img/jslogo.png" alt="jslogo" />
+          </div>
+          <div class="section2_skillbox_bar">
+            <div class="sec2_barbox javascriptbar"></div>
+            <div class="sec2_bartext javascriptbartext"><span>0</span>%</div>
+          </div>
+        </div>
+        <div class="section2_skillsbox jquery">
+          <div class="section2_skillbox_img jqueryimg">
+            <img src="img/jquerylogo.png" alt="jqlogo" />
+          </div>
+          <div class="section2_skillbox_bar">
+            <div class="sec2_barbox jquerybar"></div>
+            <div class="sec2_bartext jquerybartext"><span>0</span>%</div>
+          </div>
+        </div>
+        <div class="section2_skillsbox react">
+          <div class="section2_skillbox_img reactimg">
+            <img src="img/react_icon.png" alt="reactlogo" />
+          </div>
+          <div class="section2_skillbox_bar">
+            <div class="sec2_barbox reactbar"></div>
+            <div class="sec2_bartext reactbartext"><span>0</span>%</div>
+          </div>
+        </div>
+        <div class="section2_skillsbox plus_box d-flex align-items-center justify-content-center">
+          <img src="img/git.png" alt="" class="plusstack git_stack" />
+          <img src="img/mysql.png" alt="" class="plusstack mysql_stack mx-4" />
+          <img src="img/nodejs.png" alt="" class="plusstack nodejs_stack" />
+      </div>  
+    </section>
+
+    <section id="section3">
+      <div id="workstext">
+        <div class="workstext_text"><p>W</p></div>
+        <div class="workstext_text"><p>O</p></div>
+        <div class="workstext_text"><p>R</p></div>
+        <div class="workstext_text"><p>K</p></div>
+        <div class="workstext_text"><p>S</p></div>
+      </div>
+
+      <div id="workslist2">
+        <div class="slider-for" id="works-slider-contents">
+          <!-- <div class="">
+            <div class="p-2 d-flex justify-content-center">
+              <img src="img/works/suragame.PNG" alt="" class="me-3" />
+              <table class="table text-center">
+                <tr>
+                  <th>프로젝트 명</th>
+                  <td>슈퍼카 벨런스 게임</td>
+                </tr>
+                <tr>
+                  <th>분야</th>
+                  <td>웹</td>
+                </tr>
+                <tr>
+                  <th>설명</th>
+                  <td>슈퍼카 벨런스 게임</td>
+                </tr>
+                <tr>
+                  <th>기간</th>
+                  <td>2022-20-20 ~ 2022-20-20</td>
+                </tr>
+                <tr>
+                  <th>기여도</th>
+                  <td>100%</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="">2</div>
+          <div class="">3</div>
+          <div class="">4</div>
+          <div class="">5</div> -->
+        </div>
+        <div class="slider-nav mt-md-5 mt-2" id="works-slider-nav">
+          <!-- <div class="p-1 p-md-3">
+            <div
+              class="bg_setting"
+              style="background-image: url('img/works/suragame.PNG')"
+            ></div>
+          </div>
+          <div class="p-1 p-md-3">
+            <div
+              class="bg_setting"
+              style="background-image: url('img/works/cow.PNG')"
+            ></div>
+          </div>
+          <div class="p-1 p-md-3">
+            <div
+              class="bg_setting"
+              style="background-image: url('img/works/lidot.PNG')"
+            ></div>
+          </div>
+          <div class="p-1 p-md-3">
+            <div
+              class="bg_setting"
+              style="background-image: url('img/works/abys.jpg')"
+            ></div>
+          </div>
+          <div class="p-1 p-md-3">
+            <div
+              class="bg_setting"
+              style="background-image: url('img/works/yg.jpg')"
+            ></div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
+
+<script src="js/portfolio3_menu_script.js"></script>
+<script src="js/portfolio3_section1_script.js"></script>
+<script src="js/portfolio3_section2_script.js"></script>
+<script src="js/portfolio3_section3_script.js"></script>
