@@ -125,7 +125,7 @@ function loadWorks() {
     {
       name: "슈퍼카밸런스 게임",
       img: "img/works/suragame.PNG",
-      text: "성향에 따라 알맞은 슈퍼카가 매칭되는 밸런스 게임. <br> - css animation을 사용하여 인터렉티브한 동작 기능 구현 <br> - 유저가 선택한 답변들을 sessionStorage에 저장하여 결과페이지에 적용",
+      text: "성향에 따라 알맞은 슈퍼카가 매칭되는 밸런스 게임. <br> - css animation을 사용하여 사용자 입력에 따라 슬라이드, 모양이 변경되는 등 인터렉티브한 동작 기능 구현 <br> - 유저가 선택한 답변들을 sessionStorage에 저장하여 결과페이지에 적용",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP",
       date: "2021-08 ~ 2021-09",
       per: 100,
@@ -133,7 +133,7 @@ function loadWorks() {
     {
       name: "쇼핑몰 리닷",
       img: "img/works/lidot.PNG",
-      text: "욕실용품 쇼핑몰 홈페이지 <br> - 아임포트, 이니시스모듈을 사용하여 구매기능을 구현. <br>- sns로그인 라이브러리 사용하여 kakao, naver 로그인 구현 <br>- ajax 통신 활용하여 장바구니, 주문목록 API 및  MySql 작성 <br>- 주문목록, 장바구니 DB 테이블 작업 <br>- 상품등록, 관리, 재고관리등 관리자페이지 기능 구현",
+      text: "욕실용품 쇼핑몰 홈페이지 <br> - 아임포트, 이니시스모듈을 사용하여 구매기능을 구현. <br>- sns로그인 라이브러리 사용하여 kakao, naver 로그인 구현 <br>- 주문목록, 장바구니 DB 테이블 작업 <br>- ajax 통신 활용하여 장바구니, 주문목록 DB 테이블 과 API 연동 및  MySql 작성 <br>- 상품등록, 관리, 재고관리등 관리자페이지 기능 구현",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
       date: "2021-08 ~",
       per: 70,
@@ -158,7 +158,7 @@ function loadWorks() {
 
   $.each(projects, function (i, v) {
     let str = `<div class="">
-                <div class="p-2 d-flex justify-content-center cont-wrap">
+                <div class="p-2 d-flex justify-content-center cont-wrap align-items-center">
                   <img src="${v.img}" alt="" class="me-md-4 md-2" />
                   <table class="table text-center">
                     <tr>
