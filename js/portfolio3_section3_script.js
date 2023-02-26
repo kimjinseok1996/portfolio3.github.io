@@ -154,6 +154,14 @@ function loadWorks() {
       date: "2022-05 ~ 2022-12",
       per: 80,
     },
+    {
+      name: "아싸플러스",
+      img: "img/works/assaplus.PNG",
+      text: "아이스크림&주류 무인판매 매장 가맹점 모집 사이트 <br>- 전체적인 화면 레이아웃 설계, 퍼블리싱 작업 <br>- scroll 메소드와 css 에니메이션으로 인터렉티브한 동작 구현 <br>- Ajax 통신으로 백앤드개발자와 앱푸쉬알림 가맹문의 데이터 통신 <br>- emailJs 를 사용하여 가맹문의 데이터 특정 이메일로 전송하는 기능 구현 <br>- https://www.assaplus.kr",
+      stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, AJAX",
+      date: "2023-02 ~ 2023-02",
+      per: 100,
+    },
   ];
 
   $.each(projects, function (i, v) {
