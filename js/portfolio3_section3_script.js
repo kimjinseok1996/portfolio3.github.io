@@ -15,7 +15,7 @@ function loadWorks() {
   let projects = [
     {
       name: "남해마늘한우 축제",
-      img: "img/works/cow.PNG",
+      img: "img/works/cow.jpg",
       text: "지자체 행사용 홈페이지 <br> - 메인화면 UI 개발 작업 <br> - 슬라이드 기능 개발",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP",
       date: "2021-06 ~ 2021-07",
@@ -24,7 +24,7 @@ function loadWorks() {
     },
     {
       name: "슈퍼카밸런스 게임",
-      img: "img/works/suragame.PNG",
+      img: "img/works/suragame.jpg",
       text: "성향에 따라 알맞은 슈퍼카가 매칭되는 밸런스 게임. <br> - css animation을 사용하여 사용자 입력에 따라 슬라이드, 모양이 변경되는 등 인터렉티브한 동작 기능 구현 <br> - 유저가 선택한 답변들을 sessionStorage에 저장하여 결과페이지에 적용",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP",
       date: "2021-08 ~ 2021-09",
@@ -33,7 +33,7 @@ function loadWorks() {
     },
     {
       name: "쇼핑몰 리닷",
-      img: "img/works/lidot.PNG",
+      img: "img/works/lidot.jpg",
       text: "욕실용품 쇼핑몰 홈페이지 <br> - 아임포트, 이니시스모듈을 사용하여 구매기능을 구현. <br>- sns로그인 라이브러리 사용하여 kakao, naver 로그인 구현 <br>- 주문목록, 장바구니 DB 테이블 작업 <br>- ajax 통신 활용하여 장바구니, 주문목록 DB 테이블 과 API 연동 및  MySql 작성 <br>- 상품등록, 관리, 재고관리등 관리자페이지 기능 구현",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
       date: "2021-08 ~ 2022-12",
@@ -51,7 +51,7 @@ function loadWorks() {
     },
     {
       name: "차량 장비 개조 관리 시스템",
-      img: "img/works/hansung.png",
+      img: "img/works/hansung.jpg",
       text: "차량 장비별 개조 관리 <br>- 차량장비 신청 기능 작업(웹앱) <br>- 장비에 따른 비용 산정 및 계산 <br>- 신청 장비에 따라 견적서 화면 개발, 비용 계산 <br>- 각 회원이 신청한 장비 리스트 관리자화면 개발, 통계화면 개발",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
       date: "2022-06 ~ 2022-10",
@@ -69,7 +69,7 @@ function loadWorks() {
     },
     {
       name: "아싸플러스",
-      img: "img/works/assaplus.PNG",
+      img: "img/works/assaplus.jpg",
       text: "아이스크림&주류 무인판매 매장 가맹점 모집 사이트 <br>- 전체적인 화면 레이아웃 설계, 퍼블리싱 작업 <br>- scroll 메소드와 css 에니메이션으로 인터렉티브한 동작 구현 <br>- Ajax 통신으로 백앤드개발자와 앱푸쉬알림 가맹문의 데이터 통신 <br>- emailJs 를 사용하여 가맹문의 데이터 특정 이메일로 전송하는 기능 구현",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, AJAX",
       date: "2023-02 ~ 2023-02",
