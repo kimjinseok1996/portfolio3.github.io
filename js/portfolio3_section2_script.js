@@ -27,9 +27,19 @@ var skills = [
     num: 90,
   },
   {
+    name: "ajax",
+    src: "img/ajax.png",
+    num: 80,
+  },
+  {
     name: "react",
     src: "img/react_icon.png",
     num: 70,
+  },
+  {
+    name: "axios",
+    src: "img/axios.png",
+    num: 50,
   },
   {
     name: "git",
@@ -39,6 +49,11 @@ var skills = [
   {
     name: "nodejs",
     src: "img/nodejs.png",
+    num: 40,
+  },
+  {
+    name: "npm",
+    src: "img/npm.png",
     num: 40,
   },
   {
@@ -63,6 +78,22 @@ skills.forEach((v, i) => {
 
 $(window).scroll(function () {
   let windowtop = $(window).scrollTop();
+
+  if (windowtop >= $("#section2").offset().top) {
+    $("#section2 .cover").addClass("on");
+    $("#skills_wrap .bar_wrap .bar, #skills_wrap .bar_wrap .text").addClass(
+      "act"
+    );
+    $("#skills_wrap").css({
+      transform: `translateY(-${windowtop - $(window).height()}px)`,
+    });
+  } else {
+    $("#section2 .cover").removeClass("on");
+    $("#skills_wrap .bar_wrap .bar, #skills_wrap .bar_wrap .text").removeClass(
+      "act"
+    );
+  }
+
   if (windowtop >= $("#section2").offset().top - 300) {
     $("#abouttext > p").addClass("on");
 
@@ -73,10 +104,10 @@ $(window).scroll(function () {
 
     setTimeout(function () {
       $("#skills_wrap .skillsbox").addClass("on");
-    }, 1000);
+    }, 700);
 
     setTimeout(function () {
       $("#skills_wrap .bar_wrap .bar").addClass("on");
-    }, 1800);
+    }, 900);
   }
 });
