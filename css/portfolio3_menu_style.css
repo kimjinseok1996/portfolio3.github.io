@@ -28,15 +28,15 @@
   top: 28px;
 }
 
-#topmenubar.menuon {
+#topmenubar.on {
   top: 18px;
   transform: rotate(45deg);
 }
-#middlemenubar.menuon {
+#middlemenubar.on {
   top: 18px;
   opacity: 0;
 }
-#bottommenubar.menuon {
+#bottommenubar.on {
   top: 18px;
   transform: rotate(-45deg);
 }
@@ -52,7 +52,7 @@
   transition: 1s;
   opacity: 0;
 }
-#mainmenu.menuon {
+#mainmenu.on {
   top: 0;
   left: 0;
   opacity: 1;
@@ -86,7 +86,8 @@
   z-index: -9999;
   transition: 0.3s;
 }
-.mainmenu_menutext .shadow.hoveron {
+
+.mainmenu_menutext .shadow.on {
   transform: scale(2, 2);
   opacity: 0.5;
 }

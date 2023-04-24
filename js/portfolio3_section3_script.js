@@ -1,115 +1,14 @@
 $(function () {
-  var workslistnum = 0;
-  var winwidth = $(window).width();
-  //var worksboxindex = $(".worksbox").index();
-  $(".worksbox").eq(0).addClass("workson");
-  $(".worksscreenbox").eq(0).addClass("worksscreenon");
-  $(".worksscreenboxtext p a").eq(0).addClass("linkon");
-  $(window).scroll(function () {
-    windowtop = $(window).scrollTop();
-    if (windowtop >= $("#section3").offset().top - 300) {
-      $(".workstext_text").addClass("workstexton");
-
-      $("#works_screenbox").addClass("worksscreenon");
-      $("#workslist").addClass("worksliston");
-
-      $("#workslist2").addClass("worksliston2");
-    }
-
-    if (winwidth <= 880) {
-      $("#works_screenbox").removeClass("worksscreenon");
-      $("#workslist").removeClass("worksliston");
-
-      $("#workslist").addClass("worksliston880");
-      $("#works_screenbox").addClass("worksscreenon880");
-      $("#works_movebox").addClass("works_movebox880");
-
-      $(".worksbox").eq(0).addClass("workson880");
-    }
-  });
-
-  $("#workslistdownbtn").on("click", function () {
-    workslistnum++;
-    $("#workslistupbtn").css({ display: "block" });
-    $("#works_movebox").animate({ top: "-=300px" }, 700);
-    $(".worksbox").removeClass("workson");
-    $(".worksbox").eq(workslistnum).addClass("workson");
-    $(".worksscreenbox").removeClass("worksscreenon");
-    $(".worksscreenbox").eq(workslistnum).addClass("worksscreenon");
-    $(".worksscreenboxtext p a").removeClass("linkon");
-    $(".worksscreenboxtext p a").eq(workslistnum).addClass("linkon");
-
-    if (workslistnum == 7) {
-      $("#workslistdownbtn").css({ display: "none" });
-    }
-
-    if (winwidth <= 880) {
-      $(".worksbox").removeClass("workson880");
-      $(".worksbox").eq(workslistnum).addClass("workson880");
-    }
-  });
-  $("#workslistupbtn").on("click", function () {
-    workslistnum--;
-    $("#workslistdownbtn").css({ display: "block" });
-    $("#works_movebox").animate({ top: "+=300px" }, 700);
-    $(".worksbox").removeClass("workson");
-    $(".worksbox").eq(workslistnum).addClass("workson");
-    $(".worksscreenbox").removeClass("worksscreenon");
-    $(".worksscreenbox").eq(workslistnum).addClass("worksscreenon");
-    $(".worksscreenboxtext p a").removeClass("linkon");
-    $(".worksscreenboxtext p a").eq(workslistnum).addClass("linkon");
-
-    if (workslistnum == 0) {
-      $("#workslistupbtn").css({ display: "none" });
-    }
-
-    if (winwidth <= 880) {
-      $(".worksbox").removeClass("workson880");
-      $(".worksbox").eq(workslistnum).addClass("workson880");
-    }
-  });
-
-  //var worksboxindex = 0;
-  var worksboxmovepos = 0;
-  $(".worksbox").on("click", function () {
-    workslistnum = $(this).index();
-    worksboxmovepos = workslistnum * -300 + 150 + "px";
-    $("#works_movebox").stop().animate({ top: worksboxmovepos }, 700);
-
-    $(".worksbox").removeClass("workson");
-    $(this).addClass("workson");
-    $(".worksscreenbox").removeClass("worksscreenon");
-    $(".worksscreenbox").eq(workslistnum).addClass("worksscreenon");
-    $(".worksscreenboxtext p a").removeClass("linkon");
-    $(".worksscreenboxtext p a").eq(workslistnum).addClass("linkon");
-
-    $(".worksbox")
-      .first()
-      .on("click", function () {
-        $("#workslistupbtn").css({ display: "none" });
-      });
-    $(".worksbox")
-      .last()
-      .on("click", function () {
-        $("#workslistdownbtn").css({ display: "none" });
-      });
-    if (winwidth <= 880) {
-      $(".worksbox").removeClass("workson880");
-      $(this).addClass("workson880");
-    }
-  });
-  $(".worksbox")
-    .not($(".worksbox").eq(0))
-    .on("click", function () {
-      $("#workslistupbtn").css({ display: "block" });
-    });
-  $(".worksbox")
-    .not($(".worksbox").last())
-    .on("click", function () {
-      $("#workslistdownbtn").css({ display: "block" });
-    });
-
   loadWorks();
+});
+
+$(window).scroll(function () {
+  windowtop = $(window).scrollTop();
+  if (windowtop >= $("#section3").offset().top - 300) {
+    $("#workstext > p").addClass("on");
+
+    $("#workslist").addClass("on");
+  }
 });
 
 function loadWorks() {
@@ -121,6 +20,7 @@ function loadWorks() {
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP",
       date: "2021-06 ~ 2021-07",
       per: 60,
+      link: "",
     },
     {
       name: "슈퍼카밸런스 게임",
@@ -129,14 +29,16 @@ function loadWorks() {
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP",
       date: "2021-08 ~ 2021-09",
       per: 100,
+      link: "",
     },
     {
       name: "쇼핑몰 리닷",
       img: "img/works/lidot.PNG",
       text: "욕실용품 쇼핑몰 홈페이지 <br> - 아임포트, 이니시스모듈을 사용하여 구매기능을 구현. <br>- sns로그인 라이브러리 사용하여 kakao, naver 로그인 구현 <br>- 주문목록, 장바구니 DB 테이블 작업 <br>- ajax 통신 활용하여 장바구니, 주문목록 DB 테이블 과 API 연동 및  MySql 작성 <br>- 상품등록, 관리, 재고관리등 관리자페이지 기능 구현",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
-      date: "2021-08 ~",
+      date: "2021-08 ~ 2022-12",
       per: 70,
+      link: "https://lidot.co.kr/",
     },
     {
       name: "차량 유지ˑ관리 제공 시스템",
@@ -145,6 +47,16 @@ function loadWorks() {
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
       date: "2022-10 ~ 2022-11",
       per: 70,
+      link: "",
+    },
+    {
+      name: "차량 장비 개조 관리 시스템",
+      img: "img/works/hansung.png",
+      text: "차량 장비별 개조 관리 <br>- 차량장비 신청 기능 작업(웹앱) <br>- 장비에 따른 비용 산정 및 계산 <br>- 신청 장비에 따라 견적서 화면 개발, 비용 계산 <br>- 각 회원이 신청한 장비 리스트 관리자화면 개발, 통계화면 개발",
+      stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, NODE.JS, AJAX, MYSQL",
+      date: "2022-06 ~ 2022-10",
+      per: 60,
+      link: "https://hansungtruck-service.com/salesAdmin",
     },
     {
       name: "학생 교육관리 시스템",
@@ -153,21 +65,30 @@ function loadWorks() {
       stack: "REACT, ZUSTAND, NODE.JS, AXIOS, MYSQL",
       date: "2022-05 ~ 2022-12",
       per: 80,
+      link: "https://young-ga.com/",
     },
     {
       name: "아싸플러스",
       img: "img/works/assaplus.PNG",
-      text: "아이스크림&주류 무인판매 매장 가맹점 모집 사이트 <br>- 전체적인 화면 레이아웃 설계, 퍼블리싱 작업 <br>- scroll 메소드와 css 에니메이션으로 인터렉티브한 동작 구현 <br>- Ajax 통신으로 백앤드개발자와 앱푸쉬알림 가맹문의 데이터 통신 <br>- emailJs 를 사용하여 가맹문의 데이터 특정 이메일로 전송하는 기능 구현 <br>- https://www.assaplus.kr",
+      text: "아이스크림&주류 무인판매 매장 가맹점 모집 사이트 <br>- 전체적인 화면 레이아웃 설계, 퍼블리싱 작업 <br>- scroll 메소드와 css 에니메이션으로 인터렉티브한 동작 구현 <br>- Ajax 통신으로 백앤드개발자와 앱푸쉬알림 가맹문의 데이터 통신 <br>- emailJs 를 사용하여 가맹문의 데이터 특정 이메일로 전송하는 기능 구현",
       stack: "HTML, CSS, JS, JQUERY, BOOTSTRAP, AJAX",
       date: "2023-02 ~ 2023-02",
       per: 100,
+      link: "https://www.assaplus.kr",
     },
   ];
 
   $.each(projects, function (i, v) {
+    let linkTd = ``;
+    if (v.link) {
+      linkTd = `<tr>
+                  <th>링크</th>
+                  <td><a href="${v.link}" target="_blank">${v.link}</a></td>
+                </tr>`;
+    }
     let str = `<div class="">
                 <div class="p-2 d-flex justify-content-center cont-wrap align-items-center">
-                  <img src="${v.img}" alt="" class="me-md-4 md-2" />
+                  <img src="${v.img}" alt="" class="me-md-4" />
                   <table class="table text-center">
                     <tr>
                       <th>프로젝트 명</th>
@@ -189,6 +110,7 @@ function loadWorks() {
                       <th>기여도</th>
                       <td>${v.per}%</td>
                     </tr>
+                    ${linkTd}
                   </table>
                 </div>
               </div>`;
